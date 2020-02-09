@@ -4,7 +4,8 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     mode: "production",
     entry: {
-        bootstrap: "./src/js/bootstrap.js"
+        bootstrap: "./src/js/bootstrap.js",
+        fontawesome: "./src/js/fontawesome.js"
     },
     output: {
         path: path.resolve(__dirname, "./public"),
@@ -32,6 +33,17 @@ module.exports = {
                     miniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
+                ]
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "/fonts/[name].[ext]",
+                        }
+                    }
                 ]
             }
 
