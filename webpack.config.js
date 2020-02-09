@@ -3,6 +3,7 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "production",
+    watch: true,
     entry: {
         bootstrap: "./src/js/bootstrap.js",
         fontawesome: "./src/js/fontawesome.js"
