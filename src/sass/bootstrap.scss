@@ -1,4 +1,9 @@
 $enable-responsive-font-sizes:true;
 
+$theme-colors: (
+  "primary":#E27D5F,
+  "qblue" :#85CDCA
+);
+
 @import"~bootstrap/scss/bootstrap";
 

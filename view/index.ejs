@@ -1,12 +1,22 @@
-<div class="container d-flex justify-content-center">
+<div class="container mt-5">
 
-    <div class="btn-group mt-md-5 mt-5">
-        <!-- <button class="btn btn-primary">Login</button>
-    <button class="btn btn-secondary">SignUp</button> -->
-
-        <a class="btn btn-primary" href="/login">Login</a>
-        <a class="btn btn-secondary" href="#">SignUp</a>
-
-    </div>
+    <form action="/users" method="POST" class="border border-primary p-3 rounded bg-qblue">
+        <div class="form-group">
+            <label class="font-weight-bold" for="name">Name:</label>
+            <input placeholder="full name" type="text" id="name" name="name"
+                class="form-control form-control-lg border border-primary" required>
+        </div>
+        <div class="form-group">
+            <label class="font-weight-bold" for="email">Email:</label>
+            <input placeholder="email" type="email" id="email" name="email"
+                class="form-control form-control-lg border border-primary" required>
+        </div>
+        <div class="form-group">
+            <label class="font-weight-bold" for="phone">Phone No.</label>
+            <input placeholder="10 digit phone number" type="tel" id="phone" name="phone"
+                class="form-control form-control-lg border border-primary" required>
+        </div>
+        <button class="btn btn-primary font-weight-bold text-light" type="submit">Submit</button>
+    </form>
 
 </div>
