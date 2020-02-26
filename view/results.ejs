@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <table class="table bg-qblue">
+        <% data.forEach(user => { %>
+        <tr>
+            <td class="">
+                <h5><%= user.name %></h5>
+            </td>
+            <td>
+                <%= user.correctAns  %>
+            </td>
+            <td>
+                <%= (user.end-user.start)/1000  %>
+            </td>
+        </tr>
+
+        <% }) %>
+    </table>
+</div>

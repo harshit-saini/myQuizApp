@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <form action="/questions/quizSubmit" method="post">
+        <% data.forEach((question,questionNo) => { %>
+        <div class="question bg-light my-2 border rounded p-2">
+            <div class="eachQuestion">
+                <h5><%= ++questionNo %> </h5>
+                <h4><%= question.question %> </h4>
+            </div>
+            <div class="options ">
+                <div class="d-flex justify-content-between" style="max-width: 400px;">
+                    <span>
+                        <input type="radio" name="<%= questionNo%>" id="o1" value="<%= question.o1 %>">
+                        <label for="o1"><%= question.o1 %> </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="<%= questionNo%>" id="o2" value="<%= question.o2 %>">
+                        <label for="o2"><%= question.o2 %> </label>
+                    </span>
+
+                </div>
+
+                <div class="d-flex justify-content-between " style="max-width: 400px;">
+                    <span>
+                        <input type="radio" name="<%= questionNo%>" id="o3" value="<%= question.o3 %>">
+                        <label for="o3"><%= question.o3 %> </label>
+                    </span>
+
+                    <span>
+                        <input type="radio" name="<%= questionNo%>" id="o4" value="<%= question.o4 %>">
+                        <label for="o4"><%= question.o4 %> </label>
+                    </span>
+
+                </div>
+
+            </div>
+        </div>
+        <% }) %>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
